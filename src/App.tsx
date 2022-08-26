@@ -1,10 +1,10 @@
 import React from 'react';
 // import Main from './components/main/main';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Home from './components/home/homePage';
 import Nav from './components/nav/navBar';
 import { createGlobalStyle } from 'styled-components';
 import Login from './components/loginPage/login';
+import Home from './components/home/homePage';
 const GlobalStyle = createGlobalStyle`
 *{
   margin: 0;
@@ -16,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
   text-decoration: none;
 
   :root{
-    --color-bg:#191919;
-    --color-bg-variant:#2500c3;
+    --color-bg:#55505c;
+    --color-bg-variant:#5d737e;
     --color-primary:#e58xf65;
     --color-primary-variant:#328284;
     --color-white: #fff;
@@ -66,6 +66,7 @@ function App() {
             <Nav/>
             <Routes>
                 <Route path='/*' element={<Login/>}/>
+                <Route path='/home' element={<Home/>}/>
                 {/* <Route path='/home' element={<Home/>}/> */}
             </Routes>
         </BrowserRouter>     
