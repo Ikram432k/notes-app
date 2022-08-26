@@ -1,4 +1,5 @@
 import { Div,Form,Input } from './loginStyle';
+import { Link } from 'react-router-dom';
 const Login=()=>{
     return(
         <Div>
@@ -19,7 +20,9 @@ const Login=()=>{
                 />
                 </Input>
                 <div>
+                    <Link to={`/home`}>
                     <button className="btn">logIn</button>
+                    </Link>
                     <button className="btn">signUp</button>
                 </div>
             </Form>
